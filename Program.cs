@@ -11,9 +11,9 @@ namespace Properties
             Door houseDoor = new Door();
             Door roomDoor = new Door();
 
-            house.AddDoor(houseDoor);
-            room.AddDoor(roomDoor);
-            house.AddRoom(room);
+            house.Doors.Add(houseDoor);
+            room.Door.Add(roomDoor);
+            house.Rooms.Add(room);
         }
     }
 
@@ -31,9 +31,6 @@ namespace Properties
             _rooms = new List<Room>();
             _doors = new List<Door>();
         }
-
-        public void AddDoor(Door door) => _doors.Add(door);
-        public void AddRoom(Room room) => _rooms.Add(room);
     }
 
 
@@ -46,8 +43,6 @@ namespace Properties
         {
             _doors = new List<Door>();
         }
-
-        public void AddDoor(Door door) => _doors.Add(door);
     }
 
 
